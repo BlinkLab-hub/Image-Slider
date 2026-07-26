@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}
+figure{
+    overflow: hidden;
+}
+
+figcaption {
+    position: absolute;
+    left: -10000px;
+}
+
+.container {
+    position: relative;
+}
+
+button {
+    text-align: center;
+    position: absolute;
+    border: none;
+    background-color: hsla(0, 0%, 0%, 70%);
+    cursor: pointer;
+    padding: .5rem;
+    color: white;
+    font-size: 3.5rem;
+    border-radius: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition-duration: .02s;
+}
+
+#prevBtn {
+    left: 0;
+}
+
+#nxtBtn {
+    right: 0;
+}
+
+.slideLeft {
+    animation-name: slideLeft;
+    animation-duration: .2s;
+}
+
+@keyframes slideLeft {
+    from{
+        transform: translateX(100px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.slideRight {
+    animation-name: slideRight;
+    animation-duration: .2s;
+}
+
+@keyframes slideRight {
+    from{
+        transform: translateX(-100px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
